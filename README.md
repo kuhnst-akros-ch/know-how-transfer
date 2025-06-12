@@ -5,7 +5,7 @@ A home for sharing info, code snippets, and anything useful for Know-How Transfe
 ## 🚀 Potential Crash Course Topics
 
 - 🌱 Spring Boot
-- 🐚 Bash scripting
+- 🐚 [Bash scripting](bash-scripting/README.md)
 - 🐳 Docker containers
 - 🗄️ SQL
 - ✅ Writing Java unit tests
@@ -25,8 +25,8 @@ For each topic, we’ll usually go like this:
 5. **Try It Out:** Get your hands dirty—small exercises, together.
 6. *Repeat steps 2–5 for subtopics, if needed.*
 
-It’s all about getting the basics down so you walk away thinking “I get it!”  
-You might not remember every detail a month later, but you’ll *know* you cracked it once, and can Google your way back any time.
+It’s all about getting the basics down, so you walk away thinking “I get it!”  
+You might not remember every detail a month later, but you’ll *know* you cracked it once, and can google your way back any time.
 
 ---
 
@@ -52,7 +52,7 @@ _Here’s how a session could look. Super rough sketch, just so you get the vibe
 4. **Show & Tell:** Real-life examples
     - A dead simple Bash script
     - CI/CD pipeline snippets
-    - Docker build scripts using Bash
+    - Dockerfile build scripts using Bash
 
 5. **Try It Out:**
     - Write a tiny script together
