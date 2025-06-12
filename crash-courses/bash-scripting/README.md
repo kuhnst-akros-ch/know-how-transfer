@@ -1,4 +1,4 @@
-# Crash Course: Bash Scripting
+# Crash Course: 🐚 Bash Scripting
 
 1. **Intro:** What’s the point today?
     - See where Bash scripts pop up in real projects.

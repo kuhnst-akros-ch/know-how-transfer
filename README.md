@@ -5,11 +5,11 @@ A home for sharing info, code snippets, and anything useful for Know-How Transfe
 ## 🚀 Potential Crash Course Topics
 
 - 🌱 Spring Boot
-- 🐚 [Bash scripting](bash-scripting/README.md)
-- 🐳 Docker containers
+- 🐚 [Bash scripting](crash-courses/bash-scripting/README.md)
+- 🐳 [Docker](crash-courses/docker/README.md)
 - 🗄️ SQL
 - ✅ Writing Java unit tests
-- 🌿 Git
+- 🌿 [Git](crash-courses/git/README.md)
 
 *Got another topic in mind? Add it!*
 
