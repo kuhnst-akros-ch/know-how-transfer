@@ -8,15 +8,14 @@ Instead of running `docker` commands manually for each container, we now define 
 
 ## 🛠️ Setup Instructions
 
-1. Create a new folder for this project (if you haven’t already):
+1. Clone this Git repository and navigate to this folder:
 
    ```bash
-   mkdir guestbook
-   cd guestbook
+   git clone https://github.com/kuhnst-akros-ch/know-how-transfer.git
+   cd crash-courses/docker/10_guestbook
    ```
 
-2. Inside this folder, create a file named `docker-compose.yml`  
-   (copy the `docker-compose.yml` file provided in this folder)
+2. Discuss the `docker-compose.yml` file in this folder
 
 3. Then you can start the app with Docker Compose:
 

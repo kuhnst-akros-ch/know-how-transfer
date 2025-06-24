@@ -10,7 +10,7 @@
 
 ## ▶️ Usage
 
-Run the app:
+Naviage to this folder and run the app:
 
 ```bash
 podman compose up -d
