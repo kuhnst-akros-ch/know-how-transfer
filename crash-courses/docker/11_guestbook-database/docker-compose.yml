@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: guestbook
+      POSTGRES_USER: guest_user
+      POSTGRES_PASSWORD: guest_password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    environment:
+      DB_HOST: db
+      DB_NAME: guestbook
+      DB_USER: guest_user
+      DB_PASSWORD: guest_password
+    depends_on:
+      - db
+    expose:
+      - "5000"
+
+  web:
+    image: nginx:alpine
+    volumes:
+      - ./frontend/default.conf:/etc/nginx/conf.d/default.conf
+      - ./frontend/index.html:/usr/share/nginx/html/index.html
+    ports:
+      - "8081:80"
+    depends_on:
+      - app
+
+volumes:
+  db-data:

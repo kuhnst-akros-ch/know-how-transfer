@@ -1,0 +1,15 @@
+services:
+  app:
+    build: backend
+    expose:
+      - "5000"
+
+  web:
+    image: nginx:alpine
+    volumes:
+      - ./frontend/default.conf:/etc/nginx/conf.d/default.conf
+      - ./frontend/index.html:/usr/share/nginx/html/index.html
+    ports:
+      - "8080:80"
+    depends_on:
+      - app
