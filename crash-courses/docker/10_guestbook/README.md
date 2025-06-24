@@ -21,7 +21,7 @@ Instead of running `docker` commands manually for each container, we now define 
 3. Then you can start the app with Docker Compose:
 
    ```bash
-   docker compose up -d
+   podman compose up -d
    ```
    (`-d`/`--detach` runs it in the background)
 
@@ -48,5 +48,5 @@ Open your browser at:
 To view submitted entries in the backend logs:
 
 ```bash
-docker compose logs -f
+podman compose logs -f
 ```

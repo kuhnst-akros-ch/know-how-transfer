@@ -20,12 +20,12 @@ CMD echo "Hello, $NAME"
 
 ---
 
-### Option A: Pass env var in `docker run`
+### Option A: Pass env var in `podman run`
 
 ```bash
 cd hello-env
-docker build -t yourname/hello-env .
-docker run --rm -e NAME=Docker yourname/hello-env
+podman build -t yourname/hello-env .
+podman run -e NAME=Docker yourname/hello-env
 ```
 
 Expected output:
@@ -47,7 +47,7 @@ NAME=FromFile
 Run the container using `--env-file`:
 
 ```bash
-docker run --rm --env-file .env yourname/hello-env
+podman run --env-file .env yourname/hello-env
 ```
 
 Expected output:
@@ -69,7 +69,7 @@ Create a folder `hello-volume` and add this `Dockerfile`:
 ```dockerfile
 FROM alpine
 ENV NAME=World
-CMD echo "Hello, $NAME" | tee /output/greeting.txt
+CMD echo "Hello, $NAME" | tee -a /output/greeting.txt
 ```
 
 ---
@@ -78,26 +78,28 @@ CMD echo "Hello, $NAME" | tee /output/greeting.txt
 
 ```bash
 mkdir ./output
-docker build -t yourname/hello-volume .
-docker run --rm -e NAME=Host -v "$(pwd)/output:/output" yourname/hello-volume
+podman build -t yourname/hello-volume .
+MSYS_NO_PATHCONV=1 podman run -e NAME=Host -v "./output:/output" yourname/hello-volume
 ```
 
 Check `./output/greeting.txt` on your host.
+
+> 📌 MSYS_NO_PATHCONV=1 disables Git Bash’s automatic path conversion (e.g., /c/ → C:\).
 
 ---
 
 ### Option B: Use a Docker-managed volume
 
 ```bash
-docker volume create hello-vol
-docker run --rm -e NAME=Volume -v hello-vol:/output yourname/hello-volume
+podman volume create hello-vol
+podman run -e NAME=Volume -v hello-vol:/output yourname/hello-volume
 ```
 
-You **cannot** directly access Docker volumes from the host file system.  
+You **cannot** directly access Docker volumes from the host file system.
 To inspect contents, run a debug container:
 
 ```bash
-docker run --rm -it -v hello-vol:/output alpine sh
+podman run -it -v hello-vol:/output alpine sh
 # inside container
 ls /output
 cat /output/greeting.txt
@@ -106,7 +108,7 @@ cat /output/greeting.txt
 Delete the volume when finished:
 
 ```bash
-docker volume rm hello-vol
+podman volume rm hello-vol
 ```
 
 ---

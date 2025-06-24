@@ -13,7 +13,7 @@
 Run the app:
 
 ```bash
-docker compose up -d
+podman compose up -d
 ```
 
 Then open http://localhost:8081 in your browser.
@@ -27,8 +27,8 @@ To set env vars from outside, you can use a `.env` file.
 Run:
 
 ```bash
-docker compose down
-docker compose --file docker-compose.env-variables.yml up -d --build
+podman compose down
+podman compose --file docker-compose.env-variables.yml up -d --build
 ```
 
 This will rebuild the image from `docker-compose.env-variables.yml` (which uses env variables) and start the containers with the external config.

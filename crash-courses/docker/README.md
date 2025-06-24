@@ -99,9 +99,9 @@ Shows hardcoded credentials vs `.env` configuration
 
 ## 📝 Tips
 
-- Use `docker ps -a` and `docker logs <id>` to debug
-- Clean up with `docker system prune -a`
-- When stuck: `docker exec -it <id> sh` is your friend
+- Use `podman ps -a` and `podman logs <id>` to debug
+- Clean up with `podman system prune -a`
+- When stuck: `podman exec -it <id> sh` is your friend
 
 ---
 

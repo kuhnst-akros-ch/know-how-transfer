@@ -21,7 +21,7 @@ This image uses Alpine Linux and simply prints a message when started.
 
 ```bash
 cd hello-world
-docker build -t yourname/hello-world .
+podman build -t yourname/hello-world .
 ```
 
 ✅ Don’t forget the `.` at the end — it tells Docker to use the current folder.
@@ -31,7 +31,7 @@ docker build -t yourname/hello-world .
 ## ▶️ Step 3: Run the container
 
 ```bash
-docker run yourname/hello-world
+podman run yourname/hello-world
 ```
 
 Expected output:
@@ -47,25 +47,29 @@ Hello from my image
 Login first if needed:
 
 ```bash
-docker login
+podman login docker.io
 ```
 
 Then push your image:
 
 ```bash
-docker push yourname/hello-world
+podman push yourname/hello-world
 ```
 
 ---
 
 ## 🌍 Step 5: Pull and run
 
-Try it on another machine, or simulate a fresh pull:
+Remove the image locally
 
 ```bash
-# Remove the image locally
-docker image rm yourname/hello-world
-docker run yourname/hello-world
+podman image rm yourname/hello-world
+```
+
+`podman run` now downloads the image
+
+```bash
+podman run yourname/hello-world
 ```
 
 ---

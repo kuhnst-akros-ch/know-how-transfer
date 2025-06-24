@@ -22,7 +22,7 @@
 
 ## 3. Basics – One Image, One Container (15–20 min)
 
-- Docker CLI basics: `docker build`, `docker run`, `docker ps`, `docker logs`, `docker stop/rm`
+- Docker CLI basics: `podman build`, `podman run`, `podman ps`, `podman logs`, `podman stop/rm`
 - Live demo: a simple `hello.py` script in a `Dockerfile`
 - Explain `FROM`, `COPY`, `CMD`, `EXPOSE`
 - Exercise: build and run the image
@@ -55,5 +55,5 @@
 Optional stretch goals if time allows:
 
 - Add a second app in Compose (e.g., DB container)
-- Show `docker exec` and `docker cp`
-- Show `docker volume ls` and `docker inspect`
+- Show `podman exec` and `podman cp`
+- Show `podman volume ls` and `podman inspect`

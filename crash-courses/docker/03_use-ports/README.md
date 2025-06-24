@@ -21,7 +21,7 @@ This uses `busybox`’s built-in `httpd` server to serve a static HTML file.
 
 ```bash
 cd hello-web
-docker build -t yourname/hello-web .
+podman build -t yourname/hello-web .
 ```
 
 ---
@@ -29,7 +29,7 @@ docker build -t yourname/hello-web .
 ## ▶️ Step 3: Run the container and expose the port
 
 ```bash
-docker run --rm -p 8080:80 yourname/hello-web
+podman run -p 8080:80 yourname/hello-web
 ```
 
 - `-p 8080:80` maps **port 80 inside the container** to **port 8080 on your host**.
