@@ -1,0 +1,7 @@
+# Docker crash kurs
+
+# Podman not docker
+# run default hello-world
+# multipel containers of same image
+# tee - for append
+# MSYS_NO_PATHCONV=1 on windows for `docker run` with volumes

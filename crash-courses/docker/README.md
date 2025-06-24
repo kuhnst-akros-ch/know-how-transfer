@@ -5,6 +5,13 @@ You won't become a DevOps guru in 40 minutes—but you'll walk away with working
 
 ---
 
+## 0. 🛠️ Preparation
+
+Before you begin, make sure your system is ready:
+
+- ✅ [Follow the setup guide](00-preparation/README.md) to install Docker or Podman
+- 🔑 [Create an account on Docker Hub](https://hub.docker.com) for pushing your images
+
 ## 1. 🧭 Introduction: Why Docker?
 
 Docker helps solve the classic “it works on my machine” problem.  
